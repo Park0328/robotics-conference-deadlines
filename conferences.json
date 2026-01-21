@@ -4,13 +4,31 @@
     "acronym": "ICRA",
     "link": "https://2026.ieee-icra.org/",
     "deadline": "2025-09-15T23:59:00Z",
-    "timezone": "Anywhere on Earth"
+    "timezone": "Pacific Time(PST)",
+    "location" : "Vienna, Austria"
+  },
+  {
+    "name": "UR 2026",
+    "acronym": "UR",
+    "link": "https://2026.ubiquitousrobots.org/",
+    "deadline": "2026-02-13T23:59:00Z",
+    "timezone": "Pacific Time(PST)",
+    "location" : "Osaka, Japan"
   },
   {
     "name": "IROS 2026",
     "acronym": "IROS",
     "link": "https://2026.ieee-iros.org/",
     "deadline": "2026-03-02T23:59:00Z",
-    "timezone": "Anywhere on Earth"
+    "timezone": "Pacific Time(PST)",
+    "location" : "Pittsburgh, United States"
+  },
+  {
+    "name": "RO-MAN 2026",
+    "acronym": "RO-MAN",
+    "link": "https://ro-man2026.org/",
+    "deadline": "2026-03-15T23:59:00Z",
+    "timezone": "Pacific Time(PST)",
+    "location" : "Kitakyushu, Japan"
   }
 ]
