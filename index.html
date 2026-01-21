@@ -53,12 +53,12 @@
         confs.sort((a,b)=>new Date(a.deadline)-new Date(b.deadline))
              .forEach(c=>{
           const deadlineDate = new Date(c.deadline);
-          const formattedDate = deadlineDate.toLocaleString('en-US', { 
-            year: 'numeric', month: 'short', day: 'numeric', 
+          const formattedDate = deadlineDate.toLocaleString('ko-KR', { 
+            year: 'numeric', month: 'long', day: 'numeric', 
             hour: '2-digit', minute: '2-digit', 
             hour12: false,
-            timeZone: 'UTC'
-          }).replace(' GMT', ' UTC');
+            timeZone: 'Asia/Seoul'
+          });
           
           const card=document.createElement("div");
           card.className="conf-card";
