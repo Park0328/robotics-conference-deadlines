@@ -8,6 +8,22 @@
     "location" : "Vienna, Austria"
   },
   {
+    "name": "AIM 2026",
+    "acronym": "AIM",
+    "link": "https://aim2026.com/index.php",
+    "deadline": "2026-01-13T23:59:00Z",
+    "timezone": "Pacific Time(PST)",
+    "location" : "Genova, Italy"
+  },
+  {
+    "name": "RSS 2026",
+    "acronym": "RSS",
+    "link": "https://roboticsconference.org/",
+    "deadline": "2026-01-30T23:59:00Z",
+    "timezone": "Pacific Time(PST)",
+    "location" : "Sydney, Austrailia"
+  },
+  {
     "name": "UR 2026",
     "acronym": "UR",
     "link": "https://2026.ubiquitousrobots.org/",
@@ -30,5 +46,14 @@
     "deadline": "2026-03-15T23:59:00Z",
     "timezone": "Pacific Time(PST)",
     "location" : "Kitakyushu, Japan"
-  }
+  },
+
+  {
+    "name": "CoRL 2026(TBD)",
+    "acronym": "CoRL",
+    "link": "https://www.corl.org/",
+    "deadline": "2026-04-23T23:59:00Z",
+    "timezone": "Pacific Time(PST)",
+    "location" : "Austin, United States"
+  },
 ]
