@@ -13,8 +13,11 @@
     .conf-card h2{margin:.5rem 0;font-size:1.3rem}
     .conf-card a{color:#0d6efd;text-decoration:none}
     .conf-card a:hover{text-decoration:underline}
-    .countdown{font-weight:600;color:#dc3545;font-size:1.1rem}
+    .countdown{font-weight:600;color:#dc3545;font-size:1.1rem;margin:0.5rem 0}
     .passed{color:#6c757d}
+    .info{margin-top:0.5rem;font-size:0.9rem;color:#6c757d}
+    .location{margin-right:1rem}
+    @media (max-width: 600px) {.location{display:block;margin-right:0;margin-bottom:0.25rem}}
   </style>
 </head>
 <body>
@@ -27,22 +30,32 @@
   </main>
   <script>
     async function init(){
-      const res=await fetch("conferences.json");
-      const confs=await res.json();
-      const container=document.getElementById("conferences");
-      
-      confs.sort((a,b)=>new Date(a.deadline)-new Date(b.deadline))
-           .forEach(c=>{
-        const card=document.createElement("div");
-        card.className="conf-card";
-        card.innerHTML=`
-          <h2><a href="${c.link}" target="_blank">${c.name} (${c.acronym})</a></h2>
-          <div class="countdown" data-deadline="${c.deadline}"></div>
-          <small>${c.timezone}</small>
-        `;
-        container.appendChild(card);
-      });
-      startCountdown();
+      try {
+        const res=await fetch("conferences.json");
+        if(!res.ok) throw new Error(`HTTP ${res.status}`);
+        const confs=await res.json();
+        
+        const container=document.getElementById("conferences");
+        confs.sort((a,b)=>new Date(a.deadline)-new Date(b.deadline))
+             .forEach(c=>{
+          const card=document.createElement("div");
+          card.className="conf-card";
+          card.innerHTML=`
+            <h2><a href="${c.link}" target="_blank">${c.name} (${c.acronym})</a></h2>
+            <div class="countdown" data-deadline="${c.deadline}"></div>
+            <div class="info">
+              <span class="location">📍 ${c.location}</span>
+              <span class="timezone">${c.timezone}</span>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+        startCountdown();
+      } catch(e) {
+        console.error("JSON 로드 실패:", e);
+        document.getElementById("conferences").innerHTML = 
+          "<p style='color:red;text-align:center'>⚠️ conferences.json 로드 실패<br>콘솔(F12) 확인</p>";
+      }
     }
     
     function startCountdown(){
@@ -61,13 +74,13 @@
           const days=Math.floor(diff/(1000*60*60*24));
           const hours=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
           const mins=Math.floor((diff%(1000*60*60))/(1000*60));
-          const secs=Math.floor((diff%1000*60)/1000);
+          const secs=Math.floor((diff%(1000*60))/1000);
           
           el.textContent=`${days}d ${hours}h ${mins}m ${secs}s ⏳`;
         });
       }
       update();
-      setInterval(update,1000);  // 1초마다 업데이트
+      setInterval(update,1000);
     }
     
     init();
