@@ -11,7 +11,7 @@
     "name": "AIM 2026",
     "acronym": "AIM",
     "link": "https://aim2026.com/index.php",
-    "deadline": "2026-01-13T23:59:00Z(Extended)",
+    "deadline": "2026-01-13T23:59:00Z",
     "timezone": "Pacific Time(PST)",
     "location" : "Genova, Italy"
   },
@@ -44,7 +44,7 @@
     "name": "ICDL 2026",
     "acronym": "ICDL",
     "link": "https://attend.ieee.org/icdl-2026/",
-    "deadline": "2026-03-13T23:59:00Z(Extended)",
+    "deadline": "2026-03-13T23:59:00Z",
     "timezone": "Pacific Time(PST)",
     "location" : "Kyoto, Japan"
   },
