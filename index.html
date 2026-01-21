@@ -13,6 +13,7 @@
     .conf-card h2{margin:.5rem 0;font-size:1.3rem}
     .conf-card a{color:#0d6efd;text-decoration:none}
     .conf-card a:hover{text-decoration:underline}
+    .deadline-date{font-size:1rem;color:#495057;margin:0.25rem 0;font-weight:500;line-height:1.4}
     .countdown{font-weight:600;color:#dc3545;font-size:1.1rem;margin:0.5rem 0}
     .passed{color:#6c757d}
     .info{margin-top:0.5rem;font-size:0.9rem;color:#6c757d}
@@ -38,14 +39,24 @@
         const container=document.getElementById("conferences");
         confs.sort((a,b)=>new Date(a.deadline)-new Date(b.deadline))
              .forEach(c=>{
+          const deadlineDate = new Date(c.deadline);
+          const formattedDate = deadlineDate.toLocaleDateString('en-US', { 
+            year: 'numeric', month: 'short', day: 'numeric', 
+            hour: '2-digit', minute: '2-digit', 
+            timeZoneName: 'short' 
+          });
+          
           const card=document.createElement("div");
           card.className="conf-card";
           card.innerHTML=`
             <h2><a href="${c.link}" target="_blank">${c.name} (${c.acronym})</a></h2>
+            <div class="deadline-date">
+              ${formattedDate}<br>
+              <small style="color:#6c757d">${c.timezone}</small>
+            </div>
             <div class="countdown" data-deadline="${c.deadline}"></div>
             <div class="info">
               <span class="location">📍 ${c.location}</span>
-              <span class="timezone">${c.timezone}</span>
             </div>
           `;
           container.appendChild(card);
