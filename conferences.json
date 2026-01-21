@@ -7,14 +7,7 @@
     "timezone": "Pacific Time(PST)",
     "location" : "Vienna, Austria"
   },
-  {
-    "name": "AIM 2026",
-    "acronym": "AIM",
-    "link": "https://aim2026.com/index.php",
-    "deadline": "2026-01-13T23:59:00Z",
-    "timezone": "Pacific Time(PST)",
-    "location" : "Genova, Italy"
-  },
+
   {
     "name": "RSS 2026",
     "acronym": "RSS",
@@ -23,6 +16,7 @@
     "timezone": "Pacific Time(PST)",
     "location" : "Sydney, Austrailia"
   },
+
   {
     "name": "UR 2026",
     "acronym": "UR",
@@ -31,6 +25,25 @@
     "timezone": "Pacific Time(PST)",
     "location" : "Osaka, Japan"
   },
+
+  {
+    "name": "AIM 2026",
+    "acronym": "AIM",
+    "link": "https://aim2026.com/index.php",
+    "deadline": "2026-02-23T23:59:00Z",
+    "timezone": "Pacific Time(PST)",
+    "location" : "Genova, Italy"
+  },
+
+  {
+    "name": "CASE 2026",
+    "acronym": "CASE",
+    "link": "https://2026.ieeecase.org/",
+    "deadline": "2026-03-01T23:59:00Z",
+    "timezone": "Pacific Time(PST)",
+    "location" : "Shenyang, China"
+  },
+
   {
     "name": "IROS 2026",
     "acronym": "IROS",
@@ -65,5 +78,24 @@
     "deadline": "2026-04-23T23:59:00Z",
     "timezone": "Pacific Time(PST)",
     "location" : "Austin, United States"
+  },
+
+  {
+    "name": "ICCAS 2026",
+    "acronym": "ICCAS",
+    "link": "https://2026.iccas.org/",
+    "deadline": "2026-05-31T23:59:00Z",
+    "timezone": "Pacific Time(PST)",
+    "location" : "Sapporo, Japan"
+  },
+
+  {
+    "name": "Humanoids 2026(TBD)",
+    "acronym": "Humanoids",
+    "link": "http://www.humanoids.global/",
+    "deadline": "2026-07-15T23:59:00Z",
+    "timezone": "Pacific Time(PST)",
+    "location" : "Silicon Valley, United States"
   }
+
 ]
