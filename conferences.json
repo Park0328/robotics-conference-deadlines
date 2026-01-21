@@ -1,0 +1,16 @@
+[
+  {
+    "name": "ICRA 2026",
+    "acronym": "ICRA",
+    "link": "https://ras2025icra.tokyo/",
+    "deadline": "2025-09-15T23:59:00Z",
+    "timezone": "Anywhere on Earth"
+  },
+  {
+    "name": "IROS 2026",
+    "acronym": "IROS",
+    "link": "https://www.iros.org/",
+    "deadline": "2026-02-01T23:59:00Z",
+    "timezone": "AoE"
+  }
+]
