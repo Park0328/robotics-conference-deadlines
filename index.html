@@ -61,12 +61,13 @@
           const days=Math.floor(diff/(1000*60*60*24));
           const hours=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
           const mins=Math.floor((diff%(1000*60*60))/(1000*60));
+          const secs=Math.floor((diff%1000*60)/1000);
           
-          el.textContent=`${days}d ${hours}h ${mins}m left ⏳`;
+          el.textContent=`${days}d ${hours}h ${mins}m ${secs}s ⏳`;
         });
       }
       update();
-      setInterval(update,60000);
+      setInterval(update,1000);  // 1초마다 업데이트
     }
     
     init();

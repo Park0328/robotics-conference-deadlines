@@ -2,15 +2,15 @@
   {
     "name": "ICRA 2026",
     "acronym": "ICRA",
-    "link": "https://ras2025icra.tokyo/",
+    "link": "https://2026.ieee-icra.org/",
     "deadline": "2025-09-15T23:59:00Z",
     "timezone": "Anywhere on Earth"
   },
   {
     "name": "IROS 2026",
     "acronym": "IROS",
-    "link": "https://www.iros.org/",
-    "deadline": "2026-02-01T23:59:00Z",
+    "link": "https://2026.ieee-iros.org/",
+    "deadline": "2026-03-02T23:59:00Z",
     "timezone": "AoE"
   }
 ]
