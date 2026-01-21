@@ -30,7 +30,7 @@
   <header>
     <h1>🤖 Robotics Conference Deadlines</h1>
     <p>Real-time countdowns to top robotics conference deadlines</p>
-    <div class="last-updated" id="lastUpdated">Last updated: Loading...</div>
+    <div class="last-updated" id="lastUpdated">Last commit: Loading...</div>
   </header>
   <main>
     <div id="conferences"></div>
@@ -45,9 +45,24 @@
   <script>
     async function init(){
       try {
-        const res=await fetch("conferences.json");
-        if(!res.ok) throw new Error(`HTTP ${res.status}`);
-        const confs=await res.json();
+        // conferences.json + 마지막 커밋 동시 로드
+        const [confsRes, commitRes] = await Promise.all([
+          fetch("conferences.json"),
+          fetch("https://api.github.com/repos/Park0328/robotics-conference-deadlines/commits/main")
+        ]);
+        
+        if(!confsRes.ok) throw new Error(`HTTP ${confsRes.status}`);
+        const confs = await confsRes.json();
+        const latestCommit = await commitRes.json();
+        
+        // ✅ 마지막 커밋 시점 (KST)
+        const commitDate = new Date(latestCommit.commit.author.date);
+        document.getElementById('lastUpdated').textContent = 
+          `Last updated: ${commitDate.toLocaleString('en-US', { 
+            year: 'numeric', month: 'long', day: 'numeric',
+            hour: '2-digit', minute: '2-digit', hour12: false,
+            timeZone: 'Asia/Seoul'
+          })} (KST)`;
         
         const container=document.getElementById("conferences");
         confs.sort((a,b)=>new Date(a.deadline)-new Date(b.deadline))
@@ -73,20 +88,11 @@
           container.appendChild(card);
         });
         startCountdown();
-        
-        // 마지막 업데이트 시간
-        const now = new Date();
-        document.getElementById('lastUpdated').textContent = 
-          `Last-Updated: ${now.toLocaleString('en-US', { 
-            year: 'numeric', month: 'long', day: 'numeric',
-            hour: '2-digit', minute: '2-digit', hour12: false,
-            timeZone: 'Asia/Seoul'
-          })} (KST)`;
-          
       } catch(e) {
-        console.error("JSON 로드 실패:", e);
+        console.error("Load failed:", e);
         document.getElementById("conferences").innerHTML = 
-          "<div style='text-align:center;padding:2rem;color:#dc3545'><strong>⚠️ conferences.json 로드 실패</strong><br>F12 콘솔 확인하세요</div>";
+          "<div style='text-align:center;padding:2rem;color:#dc3545'><strong>⚠️ conferences.json 로드 실패</strong><br>F12 콘솔 확인</div>";
+        document.getElementById('lastUpdated').textContent = 'Last commit: Error loading';
       }
     }
     
