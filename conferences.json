@@ -72,6 +72,15 @@
   },
 
   {
+    "name": "IECON 2026",
+    "acronym": "IECON",
+    "link": "https://www.iecon2026.org/",
+    "deadline": "2026-04-15T23:59:00Z",
+    "timezone": "Pacific Time(PST)",
+    "location" : "Doha, Qatar"
+  },
+
+  {
     "name": "CoRL 2026(TBD)",
     "acronym": "CoRL",
     "link": "https://www.corl.org/",
