@@ -27,21 +27,21 @@
   },
 
   {
-    "name": "AIM 2026",
-    "acronym": "AIM",
-    "link": "https://aim2026.com/index.php",
-    "deadline": "2026-02-23T23:59:00Z",
-    "timezone": "Pacific Time(PST)",
-    "location" : "Genova, Italy"
-  },
-
-  {
     "name": "CASE 2026",
     "acronym": "CASE",
     "link": "https://2026.ieeecase.org/",
     "deadline": "2026-03-01T23:59:00Z",
     "timezone": "Pacific Time(PST)",
     "location" : "Shenyang, China"
+  },
+
+  {
+    "name": "AIM 2026",
+    "acronym": "AIM",
+    "link": "https://aim2026.com/index.php",
+    "deadline": "2026-03-10T23:59:00Z",
+    "timezone": "Pacific Time(PST)",
+    "location" : "Genova, Italy"
   },
 
   {
