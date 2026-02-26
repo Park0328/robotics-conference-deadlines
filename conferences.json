@@ -27,12 +27,12 @@
   },
 
   {
-    "name": "CASE 2026",
-    "acronym": "CASE",
-    "link": "https://2026.ieeecase.org/",
-    "deadline": "2026-03-01T23:59:00Z",
+    "name": "IROS 2026",
+    "acronym": "IROS",
+    "link": "https://2026.ieee-iros.org/",
+    "deadline": "2026-03-02T23:59:00Z",
     "timezone": "Pacific Time(PST)",
-    "location" : "Shenyang, China"
+    "location" : "Pittsburgh, United States"
   },
 
   {
@@ -45,21 +45,21 @@
   },
 
   {
-    "name": "IROS 2026",
-    "acronym": "IROS",
-    "link": "https://2026.ieee-iros.org/",
-    "deadline": "2026-03-02T23:59:00Z",
-    "timezone": "Pacific Time(PST)",
-    "location" : "Pittsburgh, United States"
-  },
-
-  {
     "name": "ICDL 2026",
     "acronym": "ICDL",
     "link": "https://attend.ieee.org/icdl-2026/",
     "deadline": "2026-03-13T23:59:00Z",
     "timezone": "Pacific Time(PST)",
     "location" : "Kyoto, Japan"
+  },
+
+  {
+    "name": "CASE 2026",
+    "acronym": "CASE",
+    "link": "https://2026.ieeecase.org/",
+    "deadline": "2026-03-15T23:59:00Z",
+    "timezone": "Pacific Time(PST)",
+    "location" : "Shenyang, China"
   },
 
   {
